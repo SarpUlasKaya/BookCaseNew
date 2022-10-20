@@ -7,6 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class BookTest {
 
+    /*
     @Test
     void create_new_book() {
         Book book = new Book(
@@ -30,5 +31,6 @@ public class BookTest {
         assertEquals("Tor Books", book.getPublisher());
         assertEquals(2005, book.getYear());
     }
+    */
 
 }

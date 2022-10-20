@@ -2,7 +2,7 @@ package com.bookcase.libraryapp.controller;
 
 import com.bookcase.libraryapp.exception.BookNotFoundException;
 import com.bookcase.libraryapp.model.Book;
-import com.bookcase.libraryapp.repository.BookRepository;
+import com.bookcase.libraryapp.repository.BookRepo;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,13 +13,14 @@ import java.util.List;
 @RequestMapping("/books")
 public class BookController {
 
+    /*
     private final BookRepository repository;
 
     public BookController(BookRepository repository) {
         this.repository = repository;
     }
 
-    /*
+
     -> A couple problems with this:
     1. If the repository constructor ever changes, everytime we create a new instance, we may have to go update it.
     2. If we try to write tests for this, it's going to be a problem if the repository class is talking to a database.
@@ -33,7 +34,7 @@ public class BookController {
     public BookController() {
         books.add(new Book());
     }
-     */
+
 
     // GET http://localhost:8080/books
     @GetMapping
@@ -66,4 +67,5 @@ public class BookController {
     public void delete(@PathVariable String id) {
         repository.delete(id);
     }
+    */
 }

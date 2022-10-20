@@ -1,19 +1,37 @@
 package com.bookcase.libraryapp.model;
 
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+
+import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Book {
+@Entity
+public class Book implements Serializable { //Serializable helps with the class as a database entity
 
-    private String id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(nullable = false, updatable = false)
+    private Long id;
+
+    @Column(nullable = false)
     private String title;
+
+    @Column(nullable = false)
     private String author;
+
     private String publisher;
     private int year;
     private String description;
     private int pageCount;
     private int progress;
 
-    public Book(String id, String title, String author, String publisher, int year, String description,
+    @Column(nullable = false, updatable = false)
+    private String bookCode;
+
+    public Book() {}
+
+    public Book(Long id, String title, String author, String publisher, int year, String description,
                 int pageCount, int progress) {
         this.id = id;
         this.title = title;
@@ -25,11 +43,11 @@ public class Book {
         this.progress = progress;
     }
 
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -89,17 +107,12 @@ public class Book {
         this.progress = progress;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Book mutableBook = (Book) o;
-        return year == mutableBook.year && pageCount == mutableBook.pageCount && progress == mutableBook.progress && id.equals(mutableBook.id) && title.equals(mutableBook.title) && author.equals(mutableBook.author) && publisher.equals(mutableBook.publisher) && description.equals(mutableBook.description);
+    public String getBookCode() {
+        return bookCode;
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, title, author, publisher, year, description, pageCount, progress);
+    public void setBookCode(String bookCode) {
+        this.bookCode = bookCode;
     }
 
     @Override
@@ -115,4 +128,20 @@ public class Book {
                 ", progress=" + progress +
                 '}';
     }
+
+    /*
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Book mutableBook = (Book) o;
+        return year == mutableBook.year && pageCount == mutableBook.pageCount && progress == mutableBook.progress && id.equals(mutableBook.id) && title.equals(mutableBook.title) && author.equals(mutableBook.author) && publisher.equals(mutableBook.publisher) && description.equals(mutableBook.description);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, title, author, publisher, year, description, pageCount, progress);
+    }
+    */
+
 }
