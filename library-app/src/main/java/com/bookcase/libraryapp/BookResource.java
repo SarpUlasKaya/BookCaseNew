@@ -6,6 +6,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.transaction.Transactional;
 import java.util.List;
 
 @RestController
@@ -42,6 +43,7 @@ public class BookResource {
         return new ResponseEntity<>(updatedBook, HttpStatus.OK);
     }
 
+    @Transactional
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> deleteBook(@PathVariable("id") Long id ) {
         bookService.deleteBook(id);
