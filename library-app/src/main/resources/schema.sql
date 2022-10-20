@@ -1,0 +1,12 @@
+DROP TABLE IF EXISTS TBL_BOOKS
+
+CREATE TABLE TBL_BOOKS (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(250) NOT NULL,
+    author VARCHAR(250) NOT NULL,
+    publisher VARCHAR(250) DEFAULT NULL,
+    bookyear INT,
+    description VARCHAR(MAX) DEFAULT NULL,
+    pageCount INT,
+    progress INT
+);
