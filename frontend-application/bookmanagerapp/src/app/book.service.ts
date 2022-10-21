@@ -22,7 +22,7 @@ export class BookService {
     return this.http.put<Book>(`${this.apiServerUrl}/book/update`, book);
   }
 
-  public deleteBook(bookId: number): Observable<void> {
+  public deleteBook(bookId: number | undefined): Observable<void> {
     return this.http.delete<void>(`${this.apiServerUrl}/book/delete/${bookId}`);
   }
 }
