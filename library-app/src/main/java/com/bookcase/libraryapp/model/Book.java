@@ -32,7 +32,7 @@ public class Book implements Serializable { //Serializable helps with the class 
     public Book() {}
 
     public Book(Long id, String title, String author, String publisher, int year, String description,
-                int pageCount, int progress) {
+                int pageCount, int progress, String bookCode) {
         this.id = id;
         this.title = title;
         this.author = author;
@@ -41,6 +41,7 @@ public class Book implements Serializable { //Serializable helps with the class 
         this.description = description;
         this.pageCount = pageCount;
         this.progress = progress;
+        this.bookCode = bookCode;
     }
 
     public Long getId() {
