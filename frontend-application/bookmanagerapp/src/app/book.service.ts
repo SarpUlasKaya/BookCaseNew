@@ -6,7 +6,7 @@ import { Book } from "./book";
 
 @Injectable({providedIn: 'root'})
 export class BookService {
-  private apiServerUrl = "";
+  private apiServerUrl = environment.apiBaseUrl;
 
   constructor(private http: HttpClient){}
 

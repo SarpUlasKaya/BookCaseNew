@@ -3,7 +3,7 @@
 	"author": "John Scalzi",
 	"publisher": "Tor Books",
 	"year": 2005,
-	"description": "Old Man's War is about a soldier named John Perry and his exploits in the Colonial Defense Forces (CDF). The recruit to the rank of captain. It is set in a universe heavily populated with lifeforms, and human colonists must compete for the scarce planets that are suitable for sustaining life. As a result, Perry must learn to fight a wide variety of aliens. The characters in Old Man's War have enhanced DNA and nanotechnology, giving them advantages in strength, speed, endurance, and situational awareness.",
+	"description": "Old Man's War is about a soldier named John Perry and his exploits in the Colonial Defense Forces (CDF). With the help of enhanced DNA and nanotechnology, Perry must learn to fight a wide variety of aliens.",
 	"pageCount": 320,
 	"progress": 0
 }
@@ -12,7 +12,7 @@
 	"author": "Andy Weir",
 	"publisher": "Self-published",
 	"year": 2011,
-	"description": "When astronauts blast off from the planet Mars, they leave behind Mark Watney, presumed dead after a fierce storm. With only a meager amount of supplies, the stranded visitor must utilize his wits and spirit to find a way to survive on the hostile planet. Meanwhile, back on Earth, members of NASA and a team of international scientists work tirelessly to bring him home, while his crew mates hatch their own plan for a daring rescue mission.",
+	"description": "When astronauts blast off from the planet Mars, they leave behind Mark Watney, presumed dead after a fierce storm. With only a meager amount of supplies, Mark must find a way to survive on the hostile planet until he is rescued.",
 	"pageCount": 369,
 	"progress": 36
 }
