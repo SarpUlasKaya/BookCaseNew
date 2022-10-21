@@ -1,6 +1,6 @@
 # BookCase
 
-DISCLAIMER: The final version of the project is located in the MySQL-trial branch and not the main branch. Make sure you are not in one of the other branches before viewing the project.
+DISCLAIMER: The final version of the project is located in the MySQL-attempt branch and not the main branch. Make sure you are not in one of the other branches before viewing the project.
 
 ### Requirements:
 1. The backend is built with Java 17. Make sure to use JDK 17 to run it.
