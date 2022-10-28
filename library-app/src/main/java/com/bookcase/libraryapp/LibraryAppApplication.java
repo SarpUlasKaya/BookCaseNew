@@ -16,6 +16,8 @@ public class LibraryAppApplication {
 		SpringApplication.run(LibraryAppApplication.class, args);
 	}
 
+	//CORS allows web applications running in one origin to resources in another with cross-origin HTTP requests.
+	//In our case, 4200 hosts the application and 8080 hosts the resources.
 	@Bean
 	public CorsFilter corsFilter() {
 		CorsConfiguration corsConfiguration = new CorsConfiguration();

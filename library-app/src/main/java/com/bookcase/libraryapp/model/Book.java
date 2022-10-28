@@ -1,12 +1,9 @@
 package com.bookcase.libraryapp.model;
 
-import org.springframework.boot.autoconfigure.domain.EntityScan;
-
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.Objects;
 
-@Entity
+@Entity //@Entity ensures our class is mapped to the database
 public class Book implements Serializable { //Serializable helps with the class as a database entity
 
     @Id
@@ -129,20 +126,5 @@ public class Book implements Serializable { //Serializable helps with the class 
                 ", progress=" + progress +
                 '}';
     }
-
-    /*
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Book mutableBook = (Book) o;
-        return year == mutableBook.year && pageCount == mutableBook.pageCount && progress == mutableBook.progress && id.equals(mutableBook.id) && title.equals(mutableBook.title) && author.equals(mutableBook.author) && publisher.equals(mutableBook.publisher) && description.equals(mutableBook.description);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, title, author, publisher, year, description, pageCount, progress);
-    }
-    */
 
 }
